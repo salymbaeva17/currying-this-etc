@@ -66,17 +66,17 @@
 // object.print()
 
 
-function volume(w) {
-    return function (l, h) {
-        return l*w*h
-    }
-}
-
-let volumeLH = volume(70)
-let figure1 = volumeLH(30, 40)
-console.log(figure1) // 84000
-let figure2 = volumeLH(123, 99)
-console.log(figure2) // 852390
+// function volume(w) {
+//     return function (l, h) {
+//         return l*w*h
+//     }
+// }
+//
+// let volumeLH = volume(70)
+// let figure1 = volumeLH(30, 40)
+// console.log(figure1) // 84000
+// let figure2 = volumeLH(123, 99)
+// console.log(figure2) // 852390
 
 
 // closure
@@ -93,7 +93,17 @@ console.log(example())
 //     count++
 //     return count
 // }
+//
+//  console.log(example()()) // 1
+//  console.log(example()()) // 1
+//  console.log(example()()) // 1
+//  console.log(example()()) // 1
+//  console.log(example()()) // 1
 
- console.log(example()()) // 1
- console.log(example()()) // 1
- console.log(example()()) // 1
+
+let counter = example()
+console.log(counter()) // 1
+console.log(counter()) // 2
+console.log(counter()) // 3
+console.log(counter()) // 4
+console.log(counter()) // 5
