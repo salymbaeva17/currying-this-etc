@@ -35,3 +35,36 @@
 // console.log(curryingSum(12)(15))
 
 
+
+
+// this context
+
+// const object ={
+//     value: "42",
+//     print: function () {
+//         function type() {
+//             console.log(this.value)
+//             return typeof this.value
+//         }
+//
+//          console.log(`${this.value} is ${type()}`) // 42 is undefined
+//     }
+// }
+//
+// object.print()
+
+
+// const object ={
+//     value: "42",
+//     print: function () {
+//         const type = () => {
+//             console.log(typeof this.value) // 42
+//             return typeof this.value // string
+//         }
+//         console.log(`${this.value} is ${type()}`) // 42 is undefined
+//     }
+// }
+//
+// object.print()
+
+
