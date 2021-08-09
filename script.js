@@ -79,3 +79,21 @@ let figure2 = volumeLH(123, 99)
 console.log(figure2) // 852390
 
 
+// closure
+const example = () => {
+    let count = 0
+    return function () {
+        count++
+        return count
+    }
+}
+
+console.log(example())
+// f () {
+//     count++
+//     return count
+// }
+
+ console.log(example()()) // 1
+ console.log(example()()) // 1
+ console.log(example()()) // 1
