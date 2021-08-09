@@ -35,8 +35,6 @@
 // console.log(curryingSum(12)(15))
 
 
-
-
 // this context
 
 // const object ={
@@ -66,5 +64,18 @@
 // }
 //
 // object.print()
+
+
+function volume(w) {
+    return function (l, h) {
+        return l*w*h
+    }
+}
+
+let volumeLH = volume(70)
+let figure1 = volumeLH(30, 40)
+console.log(figure1) // 84000
+let figure2 = volumeLH(123, 99)
+console.log(figure2) // 852390
 
 
