@@ -79,16 +79,16 @@
 // console.log(figure2) // 852390
 
 
-// closure
-const example = () => {
-    let count = 0
-    return function () {
-        count++
-        return count
-    }
-}
-
-console.log(example())
+// // closure
+// const example = () => {
+//     let count = 0
+//     return function () {
+//         count++
+//         return count
+//     }
+// }
+//
+// console.log(example())
 // f () {
 //     count++
 //     return count
@@ -101,9 +101,80 @@ console.log(example())
 //  console.log(example()()) // 1
 
 
-let counter = example()
-console.log(counter()) // 1
-console.log(counter()) // 2
-console.log(counter()) // 3
-console.log(counter()) // 4
-console.log(counter()) // 5
+// let counter = example()
+// console.log(counter()) // 1
+// console.log(counter()) // 2
+// console.log(counter()) // 3
+// console.log(counter()) // 4
+// console.log(counter()) // 5
+
+
+// // setTimeout(), setInterval()
+// for (var i = 1; i < 10; i++){
+//     setTimeout(function (){
+//         console.log(i)
+//     }, 10)
+// }
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+
+
+// for (let i = 1; i < 10; i++){
+//     setTimeout(function (){
+//         console.log(i)
+//     }, 10)
+// }
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+
+
+// for (var i = 1; i <= 10; i++){
+//     setTimeout(function (){
+//         console.log(i)
+//     }, 0)
+// }
+
+
+// через 0 и 1 секунду не важно все равно выйдет 11 10раз
+// 11
+// 11
+// 11
+// 11
+// 11
+// 11
+// 11
+// 11
+// 11
+// 11
+
+// setTimeout(()=>{
+//     console.log(2)
+// }, 100)
+//
+//
+// console.log(1)
+// // выведется 1 а потом 2
+//
+//
+// setTimeout(()=>{
+//     console.log(2)
+// }, 0)
+//
+//
+// console.log(1)
+// // выведется 1 а потом 2, так как все равно таймаут работает
+// // после обычного консольлога и 0 на самом деле не 0 а примерно 0,004
